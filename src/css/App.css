@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "RobotoMono";
+    src: url("../../font/RobotoMono-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@theme {
+    /*SCREENS*/
+    --breakpoint-mobile: 23.4375rem;
+    --breakpoint-tablet: 48rem;
+    --breakpoint-desktop: 90rem;
+
+    /*COLORS*/
+    --color-jetBlack: #0f0f0f;
+    --color-graphiteCore: #171717;
+    --color-carbonShell: #262626;
+    --color-slatePulse: #374151;
+    --color-abyssTeal: #014751;
+    --color-midnightPlum: #3C0753;
+    --color-emberCrimson: #FF3B3B;
+    --color-burntAmber: #7C3F00;
+    --color-mediumOlive: #808000;
+    --color-ionWhite: #FFFFFF;
+
+    /*TYPOGRAPHY*/
+
+    /*font-family*/
+    --font-robotoMono: "RobotoMono", monospace;
+
+    /*font-weight*/
+    --font-weight-medium: 500;
+
+    /*line-height*/
+    --leading-display: 1.25;
+    --leading-buttons: 1;
+
+    /*letter-spacing*/
+    --tracking-display: 0.1em;
+    --tracking-buttons: 0.05em;
+}
+
+@layer components {
+    .btn {
+        @apply text-[var(--color-ionWhite)] text-2xl p-4 rounded-lg hover:cursor-pointer leading-buttons tracking-buttons;
+    }
+
+    .btn-ac {
+        background-color: var(--color-emberCrimson);
+    }
+
+    .btn-operator {
+        background-color: var(--color-midnightPlum);
+    }
+
+    .btn-equals {
+        background-color: var(--color-abyssTeal);
+    }
+
+    .btn-digit {
+        background-color: var(--color-slatePulse);
+    }
+
+    .btn-dot {
+        background-color: var(--color-mediumOlive);
+    }
+
+    .btn-backspace {
+        background-color: var(--color-burntAmber);
+    }
+}
