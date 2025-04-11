@@ -55,7 +55,7 @@ const ButtonGrid = ({
           {num}
         </Button>
       ))}
-      <Button className="btn btn-equals" onClick={onEquals}>
+      <Button className="btn btn-equals" onClick={() => onEquals('=')}>
         =
       </Button>
 
