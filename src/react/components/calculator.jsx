@@ -31,7 +31,7 @@ const Calculator = () => {
   }, []);
 
   const handleButtonClick = (value) => {
-    const operators = ['+', '-', '*', '/'];
+    const operators = ['+', '-', '*', '/', '/100'];
 
     setNewInput((prevInput) => {
       const lastChar = prevInput.slice(-1);
