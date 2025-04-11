@@ -19,7 +19,9 @@ const Calculator = () => {
         handleButtonClick(key);
       } else if (['+', '-', '*', '/', '%'].includes(key)) {
         handleButtonClick(key);
-      } else if (key === 'Backspace') {
+      } else if(key === '%') {
+        handleButtonClick('/100');
+      }else if (key === 'Backspace') {
         handleBackspaceButton();
       } else if (key === 'Enter') {
         handleEqualButton('=');
