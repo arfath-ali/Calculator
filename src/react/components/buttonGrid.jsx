@@ -6,7 +6,7 @@ const ButtonGrid = ({
   onDigit,
   onDot,
   onBackspace,
-  onEquals,
+  onEquals
 }) => {
   return (
     <>

@@ -72,7 +72,7 @@ const Calculator = () => {
   const evaluateOutput = (value) => {
     try {
       const evaluatedValue = evaluate(value);
-      setNewOutput(evaluatedValue.toString());
+      setNewOutput(evaluatedValue);
       setIsError(false);
     } catch (error) {
       setNewOutput('Incorrect Expression');
