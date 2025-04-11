@@ -51,11 +51,10 @@ const Calculator = () => {
     setNewInput((prevInput) => {
       const hasOperator = /[+\-*/%]/.test(prevInput);
 
-      if (!hasOperator || prevInput.trim() === '') {
+      if (!hasOperator || prevInput.trim() === ''|| prevInput.includes(value)) {
         return prevInput;
-      } else if (prevInput.includes('=')) {
-        return prevInput;
-      } else {
+      } 
+      else {
         evaluateOutput(prevInput);
         return prevInput + value;
       }
@@ -73,7 +72,7 @@ const Calculator = () => {
   const evaluateOutput = (value) => {
     try {
       const evaluatedValue = evaluate(value);
-      setNewOutput(evaluatedValue);
+      setNewOutput(evaluatedValue.toString());
       setIsError(false);
     } catch (error) {
       setNewOutput('Incorrect Expression');
